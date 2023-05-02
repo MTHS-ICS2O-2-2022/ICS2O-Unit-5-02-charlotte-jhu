@@ -16,8 +16,8 @@ func main() {
 	// variables
 	var randomNumber int
 	var positiveOrNegative string
-	var positive string = "positive"
-	var negative string = "negative"
+	var positive = "positive"
+	var negative = "negative"
 
 	// input
 	fmt.Println("This program generates a positive or negative number")
@@ -27,20 +27,20 @@ func main() {
 
 	// process
 	if positiveOrNegative == positive {
-	rand.Seed(time.Now().UnixNano())
-	min := 1
-	max := 6
-	randomNumber = rand.Intn(max-min) + min
+		rand.Seed(time.Now().UnixNano())
+		min := 1
+		max := 6
+		randomNumber = rand.Intn(max-min) + min
 	} else if positiveOrNegative == negative {
-	rand.Seed(time.Now().UnixNano())
-	min := -6
-	max := -1
-	randomNumber = rand.Intn(max-min) + min
+		rand.Seed(time.Now().UnixNano())
+		min := -6
+		max := -1
+		randomNumber = rand.Intn(max-min) + min
 	} else {
 		fmt.Println("Invalid input")
 	}
 
 	// output
-	fmt.Println("The random number is: ",randomNumber )
+	fmt.Println("The random number is: ", randomNumber)
 	fmt.Println("\nDone.")
 }
